@@ -1,0 +1,14 @@
+defaultIndent: '  '  # Two spaces for indentation
+
+indentAfterItems:
+  itemize: 1
+  enumerate: 1
+  description: 1
+
+modifyLineBreaks:
+  preserveBlankLines: 1
+  condenseMultipleBlankLinesInto: 1
+  textWrapOptions:
+    columns: 80
+    
+createBackup: 0

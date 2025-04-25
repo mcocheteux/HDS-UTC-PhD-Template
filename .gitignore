@@ -1,0 +1,27 @@
+# LaTeX temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.dvi
+*.pdf
+*.bcf
+*.run.xml
+
+# Temporary folders
+tmp/
+build/
+output/
+
+# Editor temporary files
+*~
+*.swp
+*.swo
+.DS_Store

@@ -1,0 +1,110 @@
+%*******************************************************
+% Table of Contents
+%*******************************************************
+\pagestyle{scrheadings}
+\pdfbookmark[1]{\contentsname}{tableofcontents}
+
+\setcounter{tocdepth}{1} % <-- 2 includes up to subsections in the ToC
+% \setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+\manualmark
+\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+{\footnotesize
+  \tableofcontents}
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+
+%*******************************************************
+% List of Figures and of the Tables
+%*******************************************************
+\clearpage
+% \pagestyle{empty} % Uncomment this line if your lists should not have any headlines with section name and page number
+\begingroup
+\let\clearpage\relax
+\let\cleardoublepage\relax
+% %*******************************************************
+% % List of Figures
+% %*******************************************************
+% %\phantomsection
+% %\addcontentsline{toc}{chapter}{\listfigurename}
+% \pdfbookmark[1]{\listfigurename}{lof}
+% \listoffigures
+
+% \vspace{8ex}
+
+% %*******************************************************
+% % List of Tables
+% %*******************************************************
+% %\phantomsection
+% %\addcontentsline{toc}{chapter}{\listtablename}
+% \pdfbookmark[1]{\listtablename}{lot}
+% \listoftables
+
+% \vspace{8ex}
+% \newpage
+
+% %*******************************************************
+% % List of Listings
+% %*******************************************************
+% %\phantomsection
+% %\addcontentsline{toc}{chapter}{\lstlistlistingname}
+% \pdfbookmark[1]{\lstlistlistingname}{lol}
+% \lstlistoflistings
+
+% \vspace{8ex}
+
+%*******************************************************
+% Acronyms
+%*******************************************************
+%\phantomsection
+\pdfbookmark[1]{Acronyms}{acronyms}
+\markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
+\chapter*{Acronyms}
+ {\footnotesize
+  \begin{acronym}[UMLX]
+    \acro{AI}{Artificial Intelligence}
+    \acro{AUC}{Area Under Curve}
+    \acro{BN}{Batch Normalization}
+    \acro{BNN}{Bayesian Neural Network}
+    \acro{CNN}{Convolutional Neural Network}
+    \acro{CP}{Conformal Prediction}
+    \acro{CPU}{Central Processing Unit}
+    \acro{DL}{Deep Learning}
+    \acro{DoF}{Degrees of Freedom}
+    \acro{DSEC}{Dynamic and Segment-aware Evaluation Challenge}
+    \acro{EKF}{Extended Kalman Filter}
+    \acro{FC}{Fully Connected}
+    \acro{FOV}{Field of View}
+    \acro{FPS}{Frames Per Second}
+    \acro{GLPN}{Global-Local Path Networks~\cite{kimGlobalLocalPathNetworks2022}}
+    \acro{GPU}{Graphics Processing Unit}
+    \acro{IMU}{Inertial Measurement Unit}
+    \acro{IoU}{Intersection over Union}
+    \acro{IS}{Interval Score}
+    \acro{KITTI}{Karlsruhe Institute of Technology and Toyota Technological Institute}
+    \acro{LiDAR}{Light Detection And Ranging}
+    \acro{LSTM}{Long Short-Term Memory}
+    \acro{MAE}{Mean Absolute Error}
+    \acro{MCD}{Monte Carlo Dropout}
+    \acro{ML}{Machine Learning}
+    \acro{MPIW}{Mean Prediction Interval Width}
+    \acro{MSE}{Mean Squared Error}
+    \acro{MULi-Ev}{Maintaining Unperturbed LiDAR-Event Calibration}
+    \acro{NeRF}{Neural Radiance Fields}
+    \acro{NLL}{Negative Log-Likelihood}
+    \acro{PICP}{Prediction Interval Coverage Probability}
+    \acro{PnP}{Perspective-n-Point}
+    \acro{PNN}{Probabilistic Neural Network}
+    \acro{ReLU}{Rectified Linear Unit}
+    \acro{RGB}{Red Green Blue}
+    \acro{RMSE}{Root Mean Square Error}
+    \acro{RNN}{Recurrent Neural Network}
+    \acro{ROC}{Receiver Operating Characteristic}
+    \acro{SGD}{Stochastic Gradient Descent}
+    \acro{SLAM}{Simultaneous Localization and Mapping}
+    \acro{SVD}{Singular Value Decomposition}
+    \acro{ToF}{Time of Flight}
+    \acro{VIO}{Visual-Inertial Odometry}
+  \end{acronym}
+ }
+\endgroup

@@ -1,0 +1,21 @@
+%*******************************************************
+% Publications
+%*******************************************************
+\pdfbookmark[1]{Publications}{publications}
+\chapter*{Publications}
+
+%\noindent Put your publications from the thesis here. The packages \texttt{multibib} or \texttt{bibtopic} etc. can be used to handle multiple different bibliographies in your document.
+
+\section*{During the thesis}
+\begin{refsection}[duringthesis]
+  \small
+  \nocite{*} % is local to to the enclosing refsection
+  \printbibliography[heading=none]
+\end{refsection}
+
+\section*{Others}
+\begin{refsection}[outsidethesis]
+  \small
+  \nocite{*} % is local to to the enclosing refsection
+  \printbibliography[heading=none]
+\end{refsection}

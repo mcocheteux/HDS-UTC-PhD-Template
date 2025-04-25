@@ -1,0 +1,119 @@
+% **************************************************************************************************************
+% A Classic Thesis Style
+% An Homage to The Elements of Typographic Style
+%
+% Copyright (C) 2015 André Miede http://www.miede.de
+%
+% If you like the style then I would appreciate a postcard. My address 
+% can be found in the file HDSThesis.pdf. A collection of the 
+% postcards I received so far is available online at 
+% http://postcards.miede.de
+%
+% License:
+% This program is free software; you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation; either version 2 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program; see the file COPYING.  If not, write to
+% the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+% Boston, MA 02111-1307, USA.
+%
+% **************************************************************************************************************
+\RequirePackage{silence}
+\WarningFilter{scrreprt}{Usage of package `titlesec'}
+\WarningFilter{titlesec}{Non standard sectioning command detected}
+\RequirePackage{fix-cm} % fix some latex issues see: http://texdoc.net/texmf-dist/doc/latex/base/fixltx2e.pdf
+\documentclass[ titlepage,numbers=noenddot,headinclude,
+                footinclude=true,cleardoublepage=empty,abstract=off,
+                BCOR=0mm,paper=a4,fontsize=12pt,%11pt,a4paper,%
+                french,american,%
+                ]{scrreprt}
+
+%********************************************************************
+% Note: Make all your adjustments in here
+%*******************************************************
+\input{hdsthesis-config}
+
+%********************************************************************
+% Bibliographies
+%*******************************************************
+\addbibresource{bibliography/bibliography.bib}
+\addbibresource[label=duringthesis]{bibliography/duringthesis.bib}
+\addbibresource[label=outsidethesis]{bibliography/outsidethesis.bib}
+
+%********************************************************************
+% Hyphenation
+%*******************************************************
+%\hyphenation{put special hyphenation here}
+
+% ********************************************************************
+\begin{document}
+\frenchspacing
+\raggedbottom
+\selectlanguage{american} % american ngerman
+%\renewcommand*{\bibname}{new name}
+%\setbibpreamble{}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\pagestyle{plain}
+
+%********************************************************************
+% Frontmatter
+%*******************************************************
+\include{prelims/Titlepage}
+\include{prelims/Titleback}
+\cleardoublepage
+\include{prelims/Abstract}
+\cleardoublepage
+\include{prelims/Publications}
+\cleardoublepage
+\include{prelims/Acknowledgments} % For later
+\pagestyle{scrheadings}
+\cleardoublepage
+\include{prelims/Contents}
+%********************************************************************
+% Mainmatter
+%*******************************************************
+
+\cleardoublepage
+\part{Introduction}
+\include{chapters/INTRO/Introduction}
+\include{chapters/INTRO/SOTA_Calibration}
+\include{chapters/INTRO/INTRO_Objectives}
+
+\cleardoublepage
+\ctparttext{This part introduces the contributions that form the foundation of this work. It highlights the novel methodologies, experiments, and evaluations undertaken to address the challenges presented in this research. Each contribution is framed to connect with existing literature while presenting original insights that advance the field. The aim is to bridge theoretical advancements with practical applications, ensuring useful contributions to the community.}
+\part{Contributions}
+\include{chapters/CONTRIBUTIONS/PseudoCal}
+\include{chapters/CONTRIBUTIONS/MULi}
+\include{chapters/CONTRIBUTIONS/Uncertainty}
+
+\part{Conclusion}
+\include{chapters/CONCLUSION/Conclusion}
+
+% ********************************************************************
+% Backmatter
+%*******************************************************
+% \appendix
+%\renewcommand{\thechapter}{\alph{chapter}}
+\cleardoublepage
+% \part{Appendix}
+% \include{chapters/Chapter0A}
+%********************************************************************
+% Other Stuff in the Back
+%*******************************************************
+\cleardoublepage\include{prelims/Bibliography}
+% \cleardoublepage\include{prelims/Declaration}
+% \cleardoublepage\include{prelims/Colophon}
+% ********************************************************************
+% Game Over: Restore, Restart, or Quit?
+%*******************************************************
+\end{document}
+% ********************************************************************

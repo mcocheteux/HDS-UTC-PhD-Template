@@ -1,0 +1,101 @@
+%*******************************************************
+% Abstract
+%*******************************************************
+%\renewcommand{\abstractname}{Abstract}
+\pdfbookmark[1]{Abstract}{Abstract}
+\begingroup
+\let\clearpage\relax
+\let\cleardoublepage\relax
+\let\cleardoublepage\relax
+
+\chapter*{Abstract}
+
+Sensor calibration is a fundamental step in enabling robust perception for
+autonomous systems. This thesis focuses on deep learning-based approaches for
+automatic multimodal sensor calibration, targeting camera-LiDAR and event
+camera-LiDAR extrinsic calibration. Traditional calibration techniques often
+rely on controlled environments, static calibration targets, or initial
+parameter estimates, limiting their applicability in dynamic real-world
+scenarios. To overcome these limitations, this research proposes novel,
+automatic, and uncertainty-aware calibration frameworks that adapt to evolving
+sensor configurations and environmental conditions.
+
+We introduce \textit{PseudoCal}, an initialization-free method leveraging
+pseudo-LiDAR representations to perform camera-LiDAR calibration directly in 3D
+space. Unlike conventional approaches that depend on 2D projections and feature
+correspondences, our technique provides calibration with minimal prior
+initialization, making it more robust against significant misalignments.
+Additionally, we present \textit{MULi-Ev}, the first real-time online
+calibration framework for event camera-LiDAR systems. This fills an
+increasingly critical gap in autonomous driving and robotics, where this sensor
+combination is gaining popularity for its ability to handle fast-moving and
+high dynamic range environments.
+
+Furthermore, we propose an \textit{uncertainty-aware} calibration framework
+that quantifies confidence in estimated parameters using conformal prediction
+and Bayesian deep learning techniques. This probabilistic modeling enhances
+trustworthiness in autonomous systems by providing reliable estimates of
+calibration confidence, crucial for safety-critical applications. This method
+could allow for the consideration of uncertainty in deciding whether to update
+calibration parameters, as well as transmitting this information to other
+modules of the system for more robust decision-making.
+
+Extensive experiments on real-world datasets demonstrate the effectiveness of
+our approaches, showcasing improvements in accuracy, robustness, and
+adaptability. The contributions of this thesis lay the groundwork for future
+advancements in sensor fusion, enabling autonomous systems to achieve more
+reliable and scalable perception in diverse operational settings.
+
+\newpage
+\begin{otherlanguage}{french}
+  \pdfbookmark[1]{Résumé}{Résumé}
+  \chapter*{Résumé}
+
+  Le calibrage des capteurs est une étape essentielle pour garantir une
+  perception robuste dans les systèmes autonomes. Cette thèse explore des
+  approches basées sur l'apprentissage profond pour le calibrage automatique des
+  capteurs multimodaux, en l'occurence le calibrage extrinsèque entre les caméras
+  et les LiDARs, ainsi qu’entre les caméras événementielles et les LiDARs. Les
+  méthodes traditionnelles de calibrage reposent généralement sur des
+  environnements contrôlés, des cibles statiques ou des estimations initiales des
+  paramètres, limitant leur applicabilité aux scénarios dynamiques du monde réel.
+  Pour surmonter ces limitations, cette recherche propose des méthodes innovantes
+  de calibrage, automatiques et prenant en compte l'incertitude, capables de
+  s’adapter aux configurations des capteurs et aux conditions environnementales
+  changeantes.
+
+  Nous introduisons \textit{PseudoCal}, une méthode limitant la dépendance à une
+  initialisation précise, en utilisant des représentations pseudo-LiDAR pour
+  réaliser un calibrage automatique entre caméras et LiDARs directement dans
+  l’espace 3D. Contrairement aux approches conventionnelles qui s’appuient sur
+  des projections 2D et des correspondances de caractéristiques, notre méthode
+  permet un calibrage avec une initialisation minimale des paramètres, ce qui la
+  rend plus robuste face aux désalignements importants. Nous présentons également
+  \textit{MULi-Ev}, la première méthode de calibrage en ligne et en temps réel
+  pour les systèmes caméra événementielle-LiDAR. Cette approche comble une lacune
+  de plus en plus importante dans le domaine des véhicules autonomes et de la
+  robotique, où cette combinaison de capteurs devient de plus en plus populaire
+  pour gérer les environnements dynamiques et à fort contraste.
+
+  Enfin, nous proposons la première méthode de calibrage avec \textit{estimation
+    de l’incertitude}, qui quantifie la confiance dans les paramètres estimés grâce
+  aux techniques de prédiction conforme et d’apprentissage profond bayésien.
+  Cette modélisation probabiliste renforce la fiabilité des systèmes autonomes en
+  fournissant des estimations calibrées et quantifiées, essentielles pour les
+  applications critiques en matière de sécurité. Cette méthode pourrait permettre
+  une prise en compte de l'incertitude pour décider de la mise à jour des
+  paramètres de calibrage, ainsi que de transmettre cette information aux autres
+  modules du système pour une prise de décision plus robuste.
+
+  Des expériences approfondies sur des jeux de données réels démontrent
+  l'efficacité de nos approches, mettant en évidence des gains en précision, en
+  robustesse et en adaptabilité. Les contributions de cette thèse jettent ainsi
+  les bases pour de futures avancées en fusion de capteurs, permettant aux
+  systèmes autonomes d’atteindre une perception plus fiable et évolutive dans des
+  contextes opérationnels variés.
+
+\end{otherlanguage}
+
+\endgroup
+
+\vfill
